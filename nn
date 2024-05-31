@@ -1,0 +1,10 @@
+javascript
+let count = localStorage.getItem('clickCount') || 0;
+document.getElementById('counter').innerText = count;
+
+document.getElementById('button').addEventListener('click', function() {
+  count++;
+
+  document.getElementById('counter').innerText = count;
+  localStorage.setItem('clickCount', count);
+});
